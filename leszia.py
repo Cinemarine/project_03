@@ -81,14 +81,31 @@
 # print(hotel_names)
 
 
-room_prices = [41, 94, 100, 7, 21, 92, 62, 49, 37, 17, ]
-for price in room_prices:
-    if price == min (room_prices):
+# room_prices = [41, 94, 100, 7, 21, 92, 62, 49, 37, 17, ]
+# for price in room_prices:
+#     if price == min (room_prices):
+#         continue
+#     if price == max (room_prices):
+#         print('Минимальная цена:', price)
+#         break
+#     print('Текущая цена:', price)
+#     else:
+#         print(price)
+# print('До свидания!')
+
+# Задача 3
+# Поиск самых высокооплачиваемых работников с помощью спискового включения
+
+# нужно найти всех сотрудников,
+# зарабатывающих по крайней мере 100 000 долларов в год
+
+employees = {'Alice' : 100000,
+    'Bob' : 99817,
+    'Carol' : 122908,
+    'Frank' : 88123,
+    'Eve' : 93121}
+for people in employees:
+    if price => min(room_prices):
         continue
-    if price == max (room_prices):
-        print('Минимальная цена:', price)
-        break
-    print('Текущая цена:', price)
-else:
-        print('Такой цены нет!')
-print('До свидания!')
+
+
