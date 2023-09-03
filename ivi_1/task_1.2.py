@@ -5,6 +5,8 @@
 # Выведите общее время звучания трех случайных песен в формате
 # Три песни звучат ХХХ минут
 
+
+
 my_favorite_songs = [
     ['Waste a Moment', 3.03],
     ['New Salvation', 4.02],
@@ -18,6 +20,7 @@ my_favorite_songs = [
 ]
 
 #Решение
+#Пункт А.
 
 from random import sample
 
