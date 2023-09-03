@@ -20,13 +20,13 @@ def switch_number (number):
       return print(f"switch_it_up({number}) -> None")
 
 
-n = input('Введите цифру от 1 до 9: ')
+n = input('Введите цифру от 0 до 9: ')
 try:
     n2 = int(n)
     switch_number(n2)
 
 except ValueError:
- print("Некорректный ввод! Введите цифру от 1 до 9:")
+ print("Некорректный ввод! Введите цифру от 0 до 9:")
  n = input()
  try:
      n2 = int(n)
