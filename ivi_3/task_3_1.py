@@ -43,10 +43,11 @@ class Matrix:
             self.column += 1
 
 
-        def print_size(self):
-
-            print('\nЧисло строк:', self.row)
-            print('Число столбцов:', self.column)
+        def print_size_count (self):
+            row_count = len (self.data)
+            column_count = len (self.data[0])
+            print('\nЧисло строк:', row_count)
+            print('Число столбцов:', column_count)
 
         def display(self):
             for row in self.data:
@@ -66,7 +67,7 @@ print("\n3. Случайно заполненная матрица:")
 m.display()
 
 # Подсчет числа строк и столбцов
-m.print_size()
+m.print_size_count()
 
 print(f"\n4. Получаем значение в ячейке (4, 6): {m.get_value(4, 6)}\n")
 
@@ -83,5 +84,6 @@ m.add_column()
 print("\n6. Добавляем строку и столбец к матрице:")
 m.display()
 
-m.print_size()
+# Подсчет числа строк и столбцов
+m.print_size_count()
 
