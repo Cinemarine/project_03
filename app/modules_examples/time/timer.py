@@ -8,12 +8,12 @@ from line_profiler import LineProfiler
 from probe import *
 
 lp = LineProfiler()
-lp_wrapper_1 = lp(foo_1)
+# lp_wrapper_1 = lp(foo_1)
 lp_wrapper_2 = lp(foo_2)
-lp_wrapper_3 = lp(foo_3)
+# lp_wrapper_3 = lp(foo_3)
 
-lp_wrapper_1(shop_list)
+# lp_wrapper_1(shop_list)
 lp_wrapper_2(shop_list)
-lp_wrapper_3(shop_list)
+# lp_wrapper_3(shop_list)
 
 lp.print_stats()
