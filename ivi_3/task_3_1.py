@@ -9,59 +9,55 @@
 #       * выводить число строк и колонок.
 
 
-
 import random
+
 
 class Matrix:
 
-        def __init__(self, row, column):
-            self.row = row
-            self.column = column
-            self.data = [[None for _ in range(column)] for _ in range(row)]
+    def __init__(self, row, column):
+        self.row = row
+        self.column = column
+        self.data = [[None for _ in range(column)] for _ in range(row)]
 
-        def fill_matrix(self, row, column, row_max_value):
-            self.row = row
-            self.column = column
-            self.data = [[random.randint(1, row_max_value) for _ in range(column)] for _ in range(row)]
+    def fill_matrix(self, row, column, row_max_value):
+        self.row = row
+        self.column = column
+        self.data = [[random.randint(1, row_max_value) for _ in range(column)] for _ in range(row)]
 
+    def get_value(self, row, column):
+        return self.data[row - 1][column - 1]
 
-        def get_value(self, row, column):
-            return self.data[row-1][column-1]
+    def new_value(self, row, column, value):
+        self.data[row - 1][column - 1] = value
 
+    def add_row(self):
+        new_row = [0] * self.column
+        self.data.append(new_row)
+        self.row += 1
 
-        def new_value(self, row, column, value):
-            self.data[row - 1][column - 1] = value
+    def add_column(self):
+        for row in self.data:
+            row.append(0)
+        self.column += 1
 
-        def add_row(self):
-            new_row = [0] * self.column
-            self.data.append(new_row)
-            self.row += 1
+    def print_size_count(self):
+        row_count = len(self.data)
+        column_count = len(self.data[0])
+        print('\nЧисло строк:', row_count)
+        print('Число столбцов:', column_count)
 
-        def add_column(self):
-            for row in self.data:
-                row.append(0)
-            self.column += 1
-
-
-        def print_size_count (self):
-            row_count = len (self.data)
-            column_count = len (self.data[0])
-            print('\nЧисло строк:', row_count)
-            print('Число столбцов:', column_count)
-
-        def display(self):
-            for row in self.data:
-             print(row)
+    def display(self):
+        for row in self.data:
+            print(row)
 
 
-
-print ("1. Cоздаем матрицу ")
+print("1. Cоздаем матрицу ")
 m = Matrix(4, 8)
 m.display()
 
 n = int(input("\n2. Введите N - максимальное значение для заполнения матрицы: "))
 # Заполняем матрицу случайными значениями, где каждая колонка - число от 1 до N
-m.fill_matrix(4,8, n)
+m.fill_matrix(4, 8, n)
 #
 print("\n3. Случайно заполненная матрица:")
 m.display()
@@ -71,7 +67,7 @@ m.print_size_count()
 
 print(f"\n4. Получаем значение в ячейке (4, 6): {m.get_value(4, 6)}\n")
 
-print ("5. Меняем это значение в матрице на 999: \n")
+print("5. Меняем это значение в матрице на 999: \n")
 m.new_value(4, 6, 999)
 
 print("6. Новая матрица:")
@@ -86,4 +82,3 @@ m.display()
 
 # Подсчет числа строк и столбцов
 m.print_size_count()
-

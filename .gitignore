@@ -1,7 +1,10 @@
-materialy/func.py
-materialy/Vocab.py
-materialy/leszia.py
-materialy/algoritmy_1.py
+/venv/
+/.idea/
+/materialy/
+/materialy/func.py
+/materialy/Vocab.py
+/materialy/leszia.py
+/materialy/algoritmy_1.py
 __init__.py
 23_08_app.py
 algotitm_1.py
@@ -15,3 +18,5 @@ materialy/test.py
 materialy/Functions.py
 materialy/main.py
 app/app.py
+materialy/Users.py
+materialy/Etapy_proekta.py.py
